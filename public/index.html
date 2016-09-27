@@ -17,6 +17,10 @@
 
 </ul>
 
+<p id="para">
+</p>
+
+
 <script>
   note();
   function note(){
@@ -30,8 +34,12 @@
     function abbrv(){
         var ul = document.getElementById("abbrv");
         var li = document.createElement("li");
+        var para = document.createElement("p")
+        var p = document.getElementById("para")
         li.appendChild(document.createTextNode(document.getElementById("content").value));
         ul.appendChild(li);
+        para.appendChild(document.createTextNode(document.getElementById("content").value));
+        p.appendChild(para);
     };
 </script>
 </body>
