@@ -2,7 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="./css/skeleton.css">
-<!-- <script src="notePad.js"></script> -->
+<script src="notePad.js"></script>
 </head>
 <body>
 <h1>My Notes</h1>
@@ -22,25 +22,19 @@
 
 
 <script>
-  note();
-  function note(){
-    document
-    .getElementById("create")
-      .addEventListener("click", function(clickEvent){
-        clickEvent.preventDefault();
-        abbrv();
-      });
-    };
-    function abbrv(){
-        var ul = document.getElementById("abbrv");
-        var li = document.createElement("li");
-        var para = document.createElement("p")
-        var p = document.getElementById("para")
-        li.appendChild(document.createTextNode(document.getElementById("content").value));
-        ul.appendChild(li);
-        para.appendChild(document.createTextNode(document.getElementById("content").value));
-        p.appendChild(para);
-    };
+  var note = new Notepad;
+  note.note();
+  // note.abbrv();
+    // function abbrv(){
+    //     var ul = document.getElementById("abbrv");
+    //     var li = document.createElement("li");
+    //     var para = document.createElement("p")
+    //     var p = document.getElementById("para")
+    //     li.appendChild(document.createTextNode(document.getElementById("content").value));
+    //     ul.appendChild(li);
+    //     para.appendChild(document.createTextNode(document.getElementById("content").value));
+    //     p.appendChild(para);
+    // };
 </script>
 </body>
 </html>
